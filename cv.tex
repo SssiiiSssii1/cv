@@ -1,0 +1,115 @@
+\documentclass[10pt, a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+
+% Color Definitions
+\definecolor{primary}{RGB}{30, 41, 59}       % Dark Slate
+\definecolor{secondary}{RGB}{37, 99, 235}    % Blue
+\definecolor{textdark}{RGB}{15, 23, 42}     % Very dark slate
+\definecolor{rulecolor}{RGB}{226, 232, 240}   % Light grey
+
+% Setup hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=secondary,
+    urlcolor=secondary,
+    pdfauthor={Mohamed Ahmed},
+    pdftitle={Mohamed Ahmed - Resume}
+}
+
+% Geometry setup
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section styling
+\titleformat{\section}
+  {\color{primary}\large\bfseries}
+  {}{0pt}{}
+  [\color{secondary}\titlerule]
+
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% List styling
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, parsep=0pt, topsep=2pt}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \bfseries \color{primary} Mohamed Ahmed}\\[3pt]
+    {\Large \color{secondary} \bfseries Back-End Developer}\\[6pt]
+    \small \color{textdark}
+    \faEnvelope\ \href{mailto:mohamedbenahmedabdelfattah@gmail.com}{mohamedbenahmedabdelfattah@gmail.com} \ $\cdot$ \
+    \faLinkedin\ \href{https://linkedin.com}{Linkedin: Mohamed Ahmed} \ $\cdot$ \
+    \faGithub\ \href{https://github.com/SssiiiSssii1}{SssiiiSssii1} \\
+    \faYoutube\ \href{https://youtube.com/@Diphro_1}{@Diphro\_1} \ $\cdot$ \
+    \faMapMarkerAlt\ Egypt \ $\cdot$ \
+    \faPhone\ 01067243071
+\end{center}
+
+\vspace{-6pt}
+
+% Summary
+\section*{\MakeUppercase{Summary}}
+Back-End Developer with 3+ years of experience building scalable, secure applications using Node.js, NestJS, TypeScript, Golang, Ruby, and Rust. Skilled in RESTful APIs, multi-tenant SaaS architecture, real-time systems, and third-party integrations (Paymob, Jitsi/Zoom, OAuth), with strong command of PostgreSQL/MongoDB and JWT-based authentication. Proven track record at GenTech delivering production-ready backend solutions.
+
+% Professional Experience
+\section*{\MakeUppercase{Professional Experience}}
+\textbf{GenTech} \hfill Cairo, Egypt \\
+\textit{Hybrid Full Time Backend Developer} \hfill 06/2025 -- Present
+\begin{itemize}
+    \item Contributed to enterprise-grade SaaS and medical mobile application projects.
+    \item Built scalable, real-time systems using Microservices architecture and WebSockets.
+    \item Independently led backend projects from development through production deployment, including CI/CD pipelines and server monitoring.
+    \item Collaborated with frontend and QA teams to deliver reliable, maintainable software, taking ownership of releases end-to-end.
+\end{itemize}
+
+% Education
+\section*{\MakeUppercase{Education}}
+\textbf{Ain Shams University} \hfill Cairo, Egypt \\
+\textit{Bachelor's degree in Computer Science} \hfill 2019 -- 2023
+
+% Projects
+\section*{\MakeUppercase{Projects}}
+
+\textbf{Multi-Tenant SaaS Platform}
+\begin{itemize}
+    \item Designed and built a multi-tenant SaaS backend from scratch (NestJS, Fastify, PostgreSQL, TypeScript) with schema-per-tenant isolation serving 20+ business modules.
+    \item Built subscription/feature-gating system with tenant-aware access control and reusable CRUD infrastructure.
+    \item Integrated S3/MinIO storage, SSE real-time notifications, email queues, and Paymob payments.
+\end{itemize}
+
+\textbf{Mohamed Ahmed LMS Project}
+\begin{itemize}
+    \item Built a Learning Management System backend enabling admins to manage courses, assignments, and student records via RESTful APIs, secured with JWT authentication and role-based access control.
+    \item Developed real-time chat and notifications for student-instructor communication.
+    \item Integrated AWS S3 for file uploads and built a grading module with automated score calculation.
+\end{itemize}
+
+\textbf{MedCare - Medical Management System}
+\begin{itemize}
+    \item Built the backend for MedCare, a mobile medical management system handling patients, doctors, and appointment scheduling.
+    \item Integrated email notifications for appointment confirmations and reminders.
+\end{itemize}
+
+% Skills
+\section*{\MakeUppercase{Skills}}
+\begin{itemize}[leftmargin=0.5em, label={}]
+    \item \textbf{Languages \& Frameworks (BE):} TypeScript, Node.js, NestJS, Express.js, Golang
+    \item \textbf{APIs \& Architecture:} RESTful APIs, GraphQL, Microservices \& Message Queues (RabbitMQ / BullMQ / Kafka), Multi-tenant SaaS architecture \& database schema isolation, Real-time Communication (SSE, WebSockets - Chat \& Notifications), Task Scheduling (Cron Jobs), Clean Architecture \& Design Patterns, Postman / ApiDog / Swagger
+    \item \textbf{Databases:} PostgreSQL, MongoDB, Redis, TypeORM / Mongoose / Sequelize (ORM), Database Design, Migrations \& Indexing, Query Optimization
+    \item \textbf{Third-Party Integrations:} Jitsi \& Zoom (video conferencing APIs), Paymob (payment gateway), Social Login (OAuth - Google/Facebook), Email Service \& SMTP (SendGrid / Nodemailer)
+    \item \textbf{Cloud \& Tools:} AWS S3 / MinIO (file storage), Docker, Git/GitHub, CI/CD (GitHub Actions), Sentry (Error Tracking \& Profiling)
+    \item \textbf{Security:} JWT (Access + Refresh Tokens), Cloudflare Turnstile, RateLimit
+    \item \textbf{Practices:} Agile, Secure Code, Problem Solving, Unit Testing, i18n
+\end{itemize}
+
+\end{document}
