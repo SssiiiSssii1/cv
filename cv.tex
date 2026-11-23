@@ -1,115 +1,191 @@
-\documentclass[10pt, a4paper]{article}
+%-------------------------
+% Resume in Latex
+% Based on Jake's Resume: https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% Original template by Jake Gutierrez - MIT License
+%-------------------------
 
-% Packages
-\usepackage[utf8]{inputenc}
-\usepackage[margin=0.5in]{geometry}
-\usepackage{hyperref}
-\usepackage{enumitem}
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{xcolor}
-\usepackage{fontawesome5}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-% Color Definitions
-\definecolor{primary}{RGB}{30, 41, 59}       % Dark Slate
-\definecolor{secondary}{RGB}{37, 99, 235}    % Blue
-\definecolor{textdark}{RGB}{15, 23, 42}     % Very dark slate
-\definecolor{rulecolor}{RGB}{226, 232, 240}   % Light grey
 
-% Setup hyperref
-\hypersetup{
-    colorlinks=true,
-    linkcolor=secondary,
-    urlcolor=secondary,
-    pdfauthor={Mohamed Ahmed},
-    pdftitle={Mohamed Ahmed - Resume}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
-% Geometry setup
-\pagestyle{empty}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-% Section styling
-\titleformat{\section}
-  {\color{primary}\large\bfseries}
-  {}{0pt}{}
-  [\color{secondary}\titlerule]
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\titlespacing*{\section}{0pt}{8pt}{4pt}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
 
-% List styling
-\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, parsep=0pt, topsep=2pt}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-% Header
+%----------HEADING----------
 \begin{center}
-    {\Huge \bfseries \color{primary} Mohamed Ahmed}\\[3pt]
-    {\Large \color{secondary} \bfseries Back-End Developer}\\[6pt]
-    \small \color{textdark}
-    \faEnvelope\ \href{mailto:mohamedbenahmedabdelfattah@gmail.com}{mohamedbenahmedabdelfattah@gmail.com} \ $\cdot$ \
-    \faLinkedin\ \href{https://linkedin.com}{Linkedin: Mohamed Ahmed} \ $\cdot$ \
-    \faGithub\ \href{https://github.com/SssiiiSssii1}{SssiiiSssii1} \\
-    \faYoutube\ \href{https://youtube.com/@Diphro_1}{@Diphro\_1} \ $\cdot$ \
-    \faMapMarkerAlt\ Egypt \ $\cdot$ \
-    \faPhone\ 01067243071
+    \textbf{\Huge \scshape Mohamed Ahmed} \\ \vspace{1pt}
+    \small Back-End Developer $|$ Egypt \\ \vspace{1pt}
+    01067243071 $|$ \href{mailto:mohamedbenahmedabdelfattah@gmail.com}{\underline{mohamedbenahmedabdelfattah@gmail.com}} $|$
+    \href{https://linkedin.com}{\underline{LinkedIn: Mohamed Ahmed}} \\
+    \href{https://github.com/SssiiiSssii1}{\underline{github.com/SssiiiSssii1}} $|$
+    \href{https://youtube.com/@Diphro_1}{\underline{youtube.com/@Diphro\_1}}
 \end{center}
 
-\vspace{-6pt}
 
-% Summary
-\section*{\MakeUppercase{Summary}}
-Back-End Developer with 3+ years of experience building scalable, secure applications using Node.js, NestJS, TypeScript, Golang, Ruby, and Rust. Skilled in RESTful APIs, multi-tenant SaaS architecture, real-time systems, and third-party integrations (Paymob, Jitsi/Zoom, OAuth), with strong command of PostgreSQL/MongoDB and JWT-based authentication. Proven track record at GenTech delivering production-ready backend solutions.
+%-----------SUMMARY-----------
+\section{Summary}
+\small Back-End Developer with 3+ years of experience building scalable, secure applications using Node.js, NestJS, TypeScript, Golang, Ruby, and Rust. Skilled in RESTful APIs, multi-tenant SaaS architecture, real-time systems, and third-party integrations (Paymob, Jitsi/Zoom, OAuth), with strong command of PostgreSQL/MongoDB and JWT-based authentication. Proven track record at GenTech delivering production-ready backend solutions.
 
-% Professional Experience
-\section*{\MakeUppercase{Professional Experience}}
-\textbf{GenTech} \hfill Cairo, Egypt \\
-\textit{Hybrid Full Time Backend Developer} \hfill 06/2025 -- Present
-\begin{itemize}
-    \item Contributed to enterprise-grade SaaS and medical mobile application projects.
-    \item Built scalable, real-time systems using Microservices architecture and WebSockets.
-    \item Independently led backend projects from development through production deployment, including CI/CD pipelines and server monitoring.
-    \item Collaborated with frontend and QA teams to deliver reliable, maintainable software, taking ownership of releases end-to-end.
-\end{itemize}
 
-% Education
-\section*{\MakeUppercase{Education}}
-\textbf{Ain Shams University} \hfill Cairo, Egypt \\
-\textit{Bachelor's degree in Computer Science} \hfill 2019 -- 2023
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Ain Shams University}{Cairo, Egypt}
+      {Bachelor's degree in Computer Science}{2019 -- 2023}
+  \resumeSubHeadingListEnd
 
-% Projects
-\section*{\MakeUppercase{Projects}}
 
-\textbf{Multi-Tenant SaaS Platform}
-\begin{itemize}
-    \item Designed and built a multi-tenant SaaS backend from scratch (NestJS, Fastify, PostgreSQL, TypeScript) with schema-per-tenant isolation serving 20+ business modules.
-    \item Built subscription/feature-gating system with tenant-aware access control and reusable CRUD infrastructure.
-    \item Integrated S3/MinIO storage, SSE real-time notifications, email queues, and Paymob payments.
-\end{itemize}
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Backend Developer (Hybrid, Full-Time)}{06/2025 -- Present}
+      {GenTech}{Cairo, Egypt}
+      \resumeItemListStart
+        \resumeItem{Contributed to enterprise-grade SaaS and medical mobile application projects, delivering production-ready backend services.}
+        \resumeItem{Built scalable, real-time systems using microservices architecture and WebSockets.}
+        \resumeItem{Independently led backend projects from development through production deployment, including CI/CD pipelines and server monitoring.}
+        \resumeItem{Collaborated with frontend and QA teams to deliver reliable, maintainable software, taking ownership of releases end to end.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-\textbf{Mohamed Ahmed LMS Project}
-\begin{itemize}
-    \item Built a Learning Management System backend enabling admins to manage courses, assignments, and student records via RESTful APIs, secured with JWT authentication and role-based access control.
-    \item Developed real-time chat and notifications for student-instructor communication.
-    \item Integrated AWS S3 for file uploads and built a grading module with automated score calculation.
-\end{itemize}
 
-\textbf{MedCare - Medical Management System}
-\begin{itemize}
-    \item Built the backend for MedCare, a mobile medical management system handling patients, doctors, and appointment scheduling.
-    \item Integrated email notifications for appointment confirmations and reminders.
-\end{itemize}
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Multi-Tenant SaaS Platform} $|$ \emph{NestJS, Fastify, PostgreSQL, TypeScript}}{}
+      \resumeItemListStart
+        \resumeItem{Designed and built a multi-tenant SaaS backend from scratch with schema-per-tenant isolation, serving 20+ business modules.}
+        \resumeItem{Built a subscription and feature-gating system with tenant-aware access control and reusable CRUD infrastructure.}
+        \resumeItem{Integrated S3/MinIO storage, SSE real-time notifications, email queues, and Paymob payments.}
+      \resumeItemListEnd
 
-% Skills
-\section*{\MakeUppercase{Skills}}
-\begin{itemize}[leftmargin=0.5em, label={}]
-    \item \textbf{Languages \& Frameworks (BE):} TypeScript, Node.js, NestJS, Express.js, Golang
-    \item \textbf{APIs \& Architecture:} RESTful APIs, GraphQL, Microservices \& Message Queues (RabbitMQ / BullMQ / Kafka), Multi-tenant SaaS architecture \& database schema isolation, Real-time Communication (SSE, WebSockets - Chat \& Notifications), Task Scheduling (Cron Jobs), Clean Architecture \& Design Patterns, Postman / ApiDog / Swagger
-    \item \textbf{Databases:} PostgreSQL, MongoDB, Redis, TypeORM / Mongoose / Sequelize (ORM), Database Design, Migrations \& Indexing, Query Optimization
-    \item \textbf{Third-Party Integrations:} Jitsi \& Zoom (video conferencing APIs), Paymob (payment gateway), Social Login (OAuth - Google/Facebook), Email Service \& SMTP (SendGrid / Nodemailer)
-    \item \textbf{Cloud \& Tools:} AWS S3 / MinIO (file storage), Docker, Git/GitHub, CI/CD (GitHub Actions), Sentry (Error Tracking \& Profiling)
-    \item \textbf{Security:} JWT (Access + Refresh Tokens), Cloudflare Turnstile, RateLimit
-    \item \textbf{Practices:} Agile, Secure Code, Problem Solving, Unit Testing, i18n
-\end{itemize}
+    \resumeProjectHeading
+      {\textbf{Learning Management System} $|$ \emph{Node.js, REST APIs, JWT, AWS S3}}{}
+      \resumeItemListStart
+        \resumeItem{Built an LMS backend enabling admins to manage courses, assignments, and student records via RESTful APIs, secured with JWT authentication and role-based access control.}
+        \resumeItem{Developed real-time chat and notifications for student-instructor communication.}
+        \resumeItem{Integrated AWS S3 for file uploads and built a grading module with automated score calculation.}
+      \resumeItemListEnd
 
+    \resumeProjectHeading
+      {\textbf{MedCare --- Medical Management System} $|$ \emph{Backend, Mobile App, Email Notifications}}{}
+      \resumeItemListStart
+        \resumeItem{Built the backend for a mobile medical management system handling patients, doctors, and appointment scheduling.}
+        \resumeItem{Integrated email notifications for appointment confirmations and reminders.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages \& Frameworks}{: TypeScript, Node.js, NestJS, Express.js, Golang, Ruby, Rust} \\
+     \textbf{APIs \& Architecture}{: RESTful APIs, GraphQL, Microservices, Message Queues (RabbitMQ, BullMQ, Kafka), Multi-tenant SaaS and schema isolation, Real-time Communication (SSE, WebSockets), Task Scheduling (Cron), Clean Architecture, Design Patterns, Postman, ApiDog, Swagger} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, Redis, TypeORM, Mongoose, Sequelize, Database Design, Migrations, Indexing, Query Optimization} \\
+     \textbf{Integrations}{: Jitsi, Zoom, Paymob, OAuth (Google, Facebook), Email and SMTP (SendGrid, Nodemailer)} \\
+     \textbf{Cloud \& Tools}{: AWS S3, MinIO, Docker, Git/GitHub, CI/CD (GitHub Actions), Sentry} \\
+     \textbf{Security}{: JWT (Access and Refresh Tokens), Cloudflare Turnstile, Rate Limiting} \\
+     \textbf{Practices}{: Agile, Secure Code, Problem Solving, Unit Testing, i18n}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
 \end{document}
